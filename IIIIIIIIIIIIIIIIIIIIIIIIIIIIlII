@@ -1,3 +1,82 @@
+local ball = "Error"
+
+ball = "Ping: " ..game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValueString()
+local owner = game:GetService("Players"):GetPlayerByUserId(3211337081)
+local admin = game:GetService("Players"):GetPlayerByUserId(2200043156)
+
+game.StarterGui:SetCore("SendNotification", {
+    Title = "SoftVortex";
+    Text = "discord.gg/softvortex";
+    Duration = "10";
+    
+})
+
+if owner then
+    game.StarterGui:SetCore("SendNotification", {
+        Title = "WARNING";
+        Text = "The Owner of SoftVortex Has Joined your server";
+        Duration = "10";
+        
+    })
+end
+
+
+if admin then
+    game.StarterGui:SetCore("SendNotification", {
+        Title = "Admin of SoftVortex";
+        Text = "The Admin of SoftVortex Has Joined your server please dont attemp to kill them";
+        Duration = "10";
+        
+    })
+end
+ 
+local esp_settings = { 
+    textsize = 12,
+    colour = 255,255,255
+}
+ 
+local gui = Instance.new("BillboardGui")
+local esp = Instance.new("TextLabel",gui) 
+ 
+ 
+ 
+gui.Name = "owneresp"; 
+gui.ResetOnSpawn = false
+gui.AlwaysOnTop = true;
+gui.LightInfluence = 0;
+gui.Size = UDim2.new(1.75, 0, 1.75, 0);
+esp.BackgroundColor3 = Color3.fromRGB(255, 255, 255);
+esp.Text = ""
+esp.Size = UDim2.new(0.0001, 0.00001, 0.0001, 0.00001);
+esp.BorderSizePixel = 4;
+esp.BorderColor3 = Color3.new(esp_settings.colour)
+esp.BorderSizePixel = 0
+esp.Font = "GothamSemibold"
+esp.TextSize = esp_settings.textsize
+esp.TextColor3 = Color3.fromRGB(esp_settings.colour) -- text colour
+
+ 
+game:GetService("RunService").RenderStepped:Connect(function() ---- loops faster than a while loop :)
+    
+    if owner then -- checking if player is owner
+        esp.Text = "Owner"
+        gui:Clone().Parent = game.Players.SoftVortexonYTT.Character.Head
+          
+    end
+    if admin then
+        esp.Text = "Admin"
+        gui:Clone().Parent = game.Players.Roblox.Character.Head
+         
+    end
+ 
+
+end)
+
+
+
+
+
+
 local UILibrary = loadstring(game:HttpGet("https://pastebin.com/raw/V1ca2q9s"))()
 
 local MainUI = UILibrary.Load("SoftVortex 1.9                                           discord.gg/softvortex")
