@@ -14,7 +14,7 @@ game.StarterGui:SetCore("SendNotification", {
 if owner then
     game.StarterGui:SetCore("SendNotification", {
         Title = "WARNING";
-        Text = "The Owner of SoftVortex Has Joined your server";
+        Text = "The Owner of SoftVortex Has Joined your server please dont attemp killing them";
         Duration = "10";
         
     })
