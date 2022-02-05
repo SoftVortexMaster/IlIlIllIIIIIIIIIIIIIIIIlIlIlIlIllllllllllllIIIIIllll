@@ -40,7 +40,7 @@ local esp = Instance.new("TextLabel",gui)
  
  
  
-gui.Name = "owneresp"; 
+gui.Name = "owneresp"; ---- properties of the esp
 gui.ResetOnSpawn = false
 gui.AlwaysOnTop = true;
 gui.LightInfluence = 0;
@@ -51,14 +51,16 @@ esp.Size = UDim2.new(0.0001, 0.00001, 0.0001, 0.00001);
 esp.BorderSizePixel = 4;
 esp.BorderColor3 = Color3.new(esp_settings.colour)
 esp.BorderSizePixel = 0
-esp.Font = "SourceSansBold"
+esp.Font = "GothamSemibold"
 esp.TextSize = esp_settings.textsize
 esp.TextColor3 = Color3.fromRGB(esp_settings.colour) -- text colour
+ 
+ 
 
  
 game:GetService("RunService").RenderStepped:Connect(function() ---- loops faster than a while loop :)
     
-    if owner then -- checking if player is owner
+    if owner then
         esp.Text = "Owner"
         gui:Clone().Parent = game.Players.SoftVortexonYTT.Character.Head
           
@@ -68,8 +70,6 @@ game:GetService("RunService").RenderStepped:Connect(function() ---- loops faster
         gui:Clone().Parent = game.Players.Roblox.Character.Head
          
     end
- 
-
 end)
 
 
