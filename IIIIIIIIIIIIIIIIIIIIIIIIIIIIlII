@@ -51,7 +51,7 @@ esp.Size = UDim2.new(0.0001, 0.00001, 0.0001, 0.00001);
 esp.BorderSizePixel = 4;
 esp.BorderColor3 = Color3.new(esp_settings.colour)
 esp.BorderSizePixel = 0
-esp.Font = "GothamSemibold"
+esp.Font = "SourceSansBold"
 esp.TextSize = esp_settings.textsize
 esp.TextColor3 = Color3.fromRGB(esp_settings.colour) -- text colour
 
