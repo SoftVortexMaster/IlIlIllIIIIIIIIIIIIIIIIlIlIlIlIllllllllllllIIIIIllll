@@ -12,7 +12,7 @@ local admin = game:GetService("Players"):GetPlayerByUserId(2200043141)
 if owner then
     game.StarterGui:SetCore("SendNotification", {
         Title = "SOFTVORTEX";
-        Text = "The Owner of SoftVortex is in your server. Please do not attempt to kill him";
+        Text = "The Owner of SoftVortex is in your server. Please do not attempt to kill him hes display is Demon";
         Duration = "10";
         
     })
@@ -38,37 +38,6 @@ local esp = Instance.new("TextLabel",gui)
  
  
  
-gui.Name = "owneresp"; 
-gui.ResetOnSpawn = false
-gui.AlwaysOnTop = true;
-gui.LightInfluence = 0;
-gui.Size = UDim2.new(1.75, 0, 1.75, 0);
-esp.BackgroundColor3 = Color3.fromRGB(255, 255, 255);
-esp.Text = ""
-esp.Size = UDim2.new(0.0001, 0.00001, 0.0001, 0.00001);
-esp.BorderSizePixel = 4;
-esp.BorderColor3 = Color3.new(esp_settings.colour)
-esp.BorderSizePixel = 0
-esp.Font = "GothamSemibold"
-esp.TextSize = esp_settings.textsize
-esp.TextColor3 = Color3.fromRGB(esp_settings.colour) -- text colour
-
- 
-game:GetService("RunService").RenderStepped:Connect(function() ---- loops faster than a while loop :)
-    
-    if owner then -- checking if player is owner
-        esp.Text = "Owner"
-        gui:Clone().Parent = game.Players.LimitedsChange.Character.Head
-          
-    end
-    if admin then
-        esp.Text = "Admin"
-        gui:Clone().Parent = game.Players.Roblox.Character.Head
-         
-    end
- 
-
-end)
 
 local FirstPage = MainUI.AddPage("Main")
 local FirstLabel = FirstPage.AddLabel("Only turn on 1 silent aim or 2 fovs show")
